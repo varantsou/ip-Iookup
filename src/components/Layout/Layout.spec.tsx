@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, vi, expect } from 'vitest';
-import { Layout } from '../Layout/Layout';
+import { Layout } from './Layout';
 
 vi.mock('../Button/Button', () => ({
   Button: ({ children, onClick }: { children: React.ReactNode; onClick?: () => void }) => (

@@ -14,8 +14,8 @@ function App() {
 
   return (
     <Layout
-      title="IP Address Lookup"
-      subTitle="Enter one or more IP addresses to lookup their location."
+      title="IP Lookup"
+      subTitle="Enter one or more IP addresses and get theier country"
       onAddRow={addRow}
       buttonText="+ Add"
     >

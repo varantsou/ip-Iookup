@@ -10,14 +10,15 @@ interface LayoutProps {
 
 export function Layout({ title, subTitle, onAddRow, children, buttonText }: Readonly<LayoutProps>) {
   return (
-    <div>
-      <h2 className="text-3xl font-bold">{title}</h2>
+    <div style={{ width: '520px' }} className="border-1 p-4 border-gray-200 rounded-md">
+      <h2 className="text-2xl font-bold text-left mb-1">{title}</h2>
       <div className="text-left">
         <p>{subTitle}</p>
-        <Button className="my-3" variant="sky" onClick={onAddRow}>
+        <Button className="mt-4" variant="sky" onClick={onAddRow}>
           {buttonText}
         </Button>
       </div>
+      <hr className="border-t-2 border-gray-200 my-5" />
       {children}
     </div>
   )

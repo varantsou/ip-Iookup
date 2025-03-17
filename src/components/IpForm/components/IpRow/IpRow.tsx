@@ -36,7 +36,7 @@ export function IpRow({ order }: IpRowProps) {
   }
 
   return (
-    <div className="grid grid-cols-[40px_1fr_200px] gap-2 w-full mb-2">
+    <div className="grid grid-cols-[40px_1fr_120px] gap-2 w-full mb-2">
       <NumberBadge order={order} className="mt-0.5" />
       <IpInput
         disabled={isLoading}
@@ -45,8 +45,8 @@ export function IpRow({ order }: IpRowProps) {
         onBlur={handleBlur}
         error={clientError || error}
       />
-      {isLoading && <Loader className="mt-2" />}
-      {data && (<Location iconUrl={data.iconUrl} timezone={data.timezone} />)}
+      {isLoading && <Loader className="mt-1" />}
+      {!isLoading && data && (<Location iconUrl={data.iconUrl} timezone={data.timezone} />)}
     </div>
   );
 }
