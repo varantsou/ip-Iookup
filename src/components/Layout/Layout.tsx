@@ -10,7 +10,7 @@ interface LayoutProps {
 
 export function Layout({ title, subTitle, onAddRow, children, buttonText }: Readonly<LayoutProps>) {
   return (
-    <div style={{ width: '520px' }} className="border-1 p-4 border-gray-200 rounded-md">
+    <div style={{ width: '520px' }} className="border-1 p-4 border-gray-200 rounded-md dark:bg-gray-800">
       <h2 className="text-2xl font-bold text-left mb-1">{title}</h2>
       <div className="text-left">
         <p>{subTitle}</p>

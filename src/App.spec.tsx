@@ -23,8 +23,8 @@ describe('App Component', () => {
       </QueryClientProvider>
     );
 
-    expect(screen.getByText('IP Address Lookup')).toBeInTheDocument();
-    expect(screen.getByText('Enter one or more IP addresses to lookup their location.')).toBeInTheDocument();
+    expect(screen.getByText('IP Lookup')).toBeInTheDocument();
+    expect(screen.getByText('Enter one or more IP addresses and get their country')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: '+ Add' })).toBeInTheDocument();
   });
 });
