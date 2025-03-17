@@ -43,7 +43,7 @@ export function IpRow({ order }: IpRowProps) {
         ip={ip}
         onChange={handleChangeIp}
         onBlur={handleBlur}
-        error={clientError || error}
+        error={clientError ?? error}
       />
       {isLoading && <Loader className="mt-1" />}
       {!isLoading && data && (<Location iconUrl={data.iconUrl} timezone={data.timezone} />)}
