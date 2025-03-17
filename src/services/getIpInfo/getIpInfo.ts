@@ -1,5 +1,5 @@
-import { IP_LOOKUP_FAILED } from '../constants/errors'
-import { IpInfo } from '../types/IP';
+import { IP_LOOKUP_FAILED } from '../../constants/errors'
+import { IpInfo } from '../../types/IP';
 
 const baseUrl = import.meta.env.VITE_API_URL;
 

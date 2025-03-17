@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { getIpInfo } from '../../services/getIpInfo';
+import { getIpInfo } from '../../services/getIpInfo/getIpInfo';
 
 export const useFetchIpInfo = (ip: string) => {
   const { data, refetch, isLoading, error } = useQuery({
