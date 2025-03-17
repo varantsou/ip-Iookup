@@ -1,27 +1,26 @@
-import './App.css'
+import { useCallback, useState } from 'react';
 
-import { IpList } from './components/IpList';
-import { Button } from './components/Button'
-import { useState } from 'react';
+import { IpForm } from './components/IpForm/IpForm';
+import { Layout } from './components/Layout/Layout';
+
+import './App.css'
 
 function App() {
   const [rows, setRows] = useState([0]);
 
+  const addRow = useCallback(() => {
+    setRows((rows) => [...rows, rows.length])
+  }, [])
+
   return (
-    <>
-      <h2 className="text-3xl font-bold">IP Lookup</h2>
-      <div className="text-left">
-        <p>Enter one or more IP addresses to lookup their location.</p>
-        <Button
-          className="my-3"
-          variant="sky"
-          onClick={() => setRows([...rows, rows.length])}
-        >
-          + Add
-        </Button>
-      </div>
-      <IpList rows={rows} />
-    </>
+    <Layout
+      title="IP Address Lookup"
+      subTitle="Enter one or more IP addresses to lookup their location."
+      onAddRow={addRow}
+      buttonText="+ Add"
+    >
+      <IpForm rows={rows} />
+    </Layout>
   )
 }
 

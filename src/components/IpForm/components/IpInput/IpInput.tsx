@@ -1,4 +1,4 @@
-import { Error } from './Error';
+import { Error } from '../../../Error/Error';
 
 interface IpInputProps {
   ip: string;

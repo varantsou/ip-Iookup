@@ -1,14 +1,22 @@
 interface LoaderProps {
   className?: string;
+  size?: 'sm' | 'md' | 'lg';
 }
 
-export function Loader({ className }: LoaderProps) {
+const sizeClasses = {
+  sm: 'h-4 w-4',
+  md: 'h-6 w-6',
+  lg: 'h-10 w-10',
+};
+
+export function Loader({ className = '', size = 'md', ...props }: LoaderProps) {
   return (
     <svg
-      className={`animate-spin h-5 w-5 text-sky-500 ${className}`}
+      className={`animate-spin text-sky-500 ${sizeClasses[size]} ${className}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
+      {...props}
     >
       <circle
         className="opacity-25"
@@ -24,5 +32,5 @@ export function Loader({ className }: LoaderProps) {
         d="M4 12a8 8 0 018-8v2a6 6 0 100 12v2a8 8 0 01-8-8z"
       />
     </svg>
-  )
+  );
 }
