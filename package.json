@@ -1,6 +1,5 @@
 {
   "name": "torq",
-  "homepage": "https://varantsou.github.io/ip-lookup/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,11 +7,8 @@
     "build": "tsc -b && vite build",
     "test": "vitest",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "tailwind:init": "tailwindcss init -p",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
