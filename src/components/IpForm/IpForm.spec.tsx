@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { IpForm } from './IpForm';
 
-vi.mock('../IpRow', () => ({
+vi.mock('./components/IpRow/IpRow', () => ({
   IpRow: ({ order }: { order: number }) => <div data-testid="ip-row">{order}</div>,
 }));
 
