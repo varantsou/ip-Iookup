@@ -24,7 +24,7 @@ export default tseslint.config(
             ecmaVersion: "latest",
             sourceType: "module",
             parserOptions: {
-                project: "./tsconfig.json", // 👈 Добавляем анализ типов
+                project: "./tsconfig.json",
                 sourceType: "module"
             }
         },
@@ -39,17 +39,13 @@ export default tseslint.config(
             'react/jsx-no-useless-fragment': 'off',
             'react/prop-types': 'off',
 
-            "object-curly-spacing": ["error", "always"], // ✅ Добавляет пробелы в { }
-            "quotes": ["error", "single"], // ✅ Делает кавычки только одинарными
+            "object-curly-spacing": ["error", "always"],
+            "quotes": ["error", "single"],
 
             // TS
-            "@typescript-eslint/no-unsafe-assignment": "off", // ❌ Отключает проверку присвоения `any`
-            "@typescript-eslint/no-unsafe-member-access": "off", // ❌ Отключает доступ к `any`
-            "@typescript-eslint/no-unsafe-call": "off", // ❌ Отключает вызов `any`
-            "@typescript-eslint/no-floating-promises": "off", // ❌ Отключает обязательный `.catch()`
-            "@typescript-eslint/prefer-nullish-coalescing": "off",
-            '@typescript-eslint/unbound-method': 'off',
-            '@typescript-eslint/consistent-type-definitions': 'off',
+            "@typescript-eslint/no-unsafe-assignment": "off",
+            "@typescript-eslint/no-unsafe-member-access": "off",
+            "@typescript-eslint/no-floating-promises": "off",
             '@typescript-eslint/no-unused-vars': [
                 'error',
                 {
