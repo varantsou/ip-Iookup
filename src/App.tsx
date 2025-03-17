@@ -1,5 +1,4 @@
 import './App.css'
-import { FormHeader } from './components/FormHeader';
 
 import { IpList } from './components/IpList';
 import { Button } from './components/Button'
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <>
-      <FormHeader />
+      <h2 className="text-3xl font-bold">IP Lookup</h2>
       <div className="text-left">
         <p>Enter one or more IP addresses to lookup their location.</p>
         <Button
