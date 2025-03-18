@@ -19,7 +19,9 @@ export function Layout({ title, subTitle, onAddRow, children, buttonText }: Read
         </Button>
       </div>
       <hr className="border-t-2 border-gray-200 my-5" />
-      {children}
+      <div className="h-[128px] overflow-auto py-0.5">
+        {children}
+      </div>
     </div>
   )
 }
