@@ -10,9 +10,11 @@ import { INVALID_IP, RESERVED_IP } from '../../../../constants/errors';
 
 interface IpRowProps {
   order: number;
+  minutes: number;
+  seconds: number;
 }
 
-export function IpRow({ order }: IpRowProps) {
+export function IpRow({ order, minutes, seconds }: IpRowProps) {
   const [ip, setIp] = useState<string>('');
   const { data, refetch, error, isLoading } = useFetchIpInfo(ip);
 
@@ -46,7 +48,9 @@ export function IpRow({ order }: IpRowProps) {
         error={clientError ?? error}
       />
       {isLoading && <Loader className="mt-1" />}
-      {!isLoading && data && (<Location iconUrl={data.iconUrl} timezone={data.timezone} />)}
+      {!isLoading && data && (
+        <Location minutes={minutes} seconds={seconds} iconUrl={data.iconUrl} timezone={data.timezone} />
+      )}
     </div>
   );
 }

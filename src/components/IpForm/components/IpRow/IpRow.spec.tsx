@@ -17,18 +17,20 @@ vi.mock('../../../../utils/validators', () => ({
   isReservedIP: vi.fn((ip) => ip === '127.0.0.1'), // let's consider this IP reserved
 }));
 
-describe('IpRow', () => {
-  it('renders without crashing', () => {
-    render(<IpRow order={1} />);
-  });
+const props = {
+  order: 1,
+  minutes: 0,
+  seconds: 0,
+};
 
+describe('IpRow', () => {
   it('displays correct order number', () => {
-    render(<IpRow order={3} />);
-    expect(screen.getByText('3')).toBeInTheDocument();
+    render(<IpRow {...props} />);
+    expect(screen.getByText('1')).toBeInTheDocument();
   });
 
   it('shows error message for invalid IP', async () => {
-    render(<IpRow order={1} />);
+    render(<IpRow {...props} />);
     const input = screen.getByPlaceholderText('Enter IP');
 
     fireEvent.change(input, { target: { value: 'invalid-ip' } });
