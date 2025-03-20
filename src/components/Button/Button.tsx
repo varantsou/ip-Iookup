@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'danger' | 'sky';
 }
 
-const baseStyles = 'rounded font-medium transition duration-200';
+const baseStyles = 'rounded font-medium transition duration-200 cursor-pointer';
 const sizeStyles = {
   sm: 'px-1 py-1 text-sm',
   md: 'px-4 py-1 text-base',
